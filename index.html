@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Manager Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Expense Manager Tracker</h1>
+    </header>
+
+    <main>
+        <section class="salary-form">
+            <h2>Add Salary</h2>
+            <form id="salaryForm">
+                <div class="form-group">
+                    <label for="salaryAmount">Salary Amount:</label>
+                    <input type="number" id="salaryAmount" placeholder="$3000" required>
+                </div>
+                <div class="form-group">
+                    <label for="salaryFrequency">Salary Frequency:</label>
+                    <select id="salaryFrequency">
+                        <option value="monthly">Monthly</option>
+                        <option value="annually">Annually</option>
+                        <option value="fortnightly">Fortnightly</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <div class="form-group" id="customSalaryDaysField" style="display:none;">
+                    <label for="customSalaryDays">Days Interval:</label>
+                    <input type="number" id="customSalaryDays" placeholder="e.g., 15 days">
+                </div>
+                <button type="submit">Set Salary</button>
+            </form>
+        </section>
+
+        <section class="expense-form">
+            <h2>Add Expense</h2>
+            <form id="expenseForm">
+                <div class="form-group">
+                    <label for="expenseName">Expense Name:</label>
+                    <input type="text" id="expenseName" placeholder="Groceries" required>
+                </div>
+                <div class="form-group">
+                    <label for="expenseAmount">Expense Amount:</label>
+                    <input type="number" id="expenseAmount" placeholder="$100" required>
+                </div>
+                <div class="form-group">
+                    <label for="expenseDate">Expense Date:</label>
+                    <input type="date" id="expenseDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="expenseRecurrence">Recurrence:</label>
+                    <select id="expenseRecurrence">
+                        <option value="one-time">One-Time</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="fortnightly">Fortnightly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="annually">Annually</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <div class="form-group" id="customExpenseDaysField" style="display:none;">
+                    <label for="customExpenseDays">Custom Days Interval:</label>
+                    <input type="number" id="customExpenseDays" placeholder="e.g., 15 days">
+                </div>
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="expense-list">
+            <h2>Expense List</h2>
+            <ul id="expenseItems"></ul>
+        </section>
+
+        <section class="summary">
+            <h2>Summary</h2>
+            <div class="summary-content">
+                <p>Total Expenses: <span id="totalExpenses">$0.00</span></p>
+                <p>Monthly Savings: <span id="monthlySavings">$0.00</span></p>
+                <p>Fortnightly Savings: <span id="fortnightlySavings">$0.00</span></p>
+                <p>Annual Savings: <span id="annualSavings">$0.00</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Expense Manager</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

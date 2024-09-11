@@ -1,0 +1,155 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+
+/* Form Containers */
+.salary-form, .expense-form, .expense-list, .summary {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.salary-form h2, .expense-form h2, .expense-list h2, .summary h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Expense List */
+.expense-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.expense-list ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+}
+
+.expense-list ul li button {
+    background-color: #ff4d4d;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.expense-list ul li button:hover {
+    background-color: #cc0000;
+}
+
+/* Summary Section */
+.summary {
+    text-align: center;
+    background-color: #e9f7ff;
+    border-left: 4px solid #007bff;
+}
+
+.summary-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .salary-form, .expense-form, .expense-list, .summary {
+        width: 30%;
+    }
+}
